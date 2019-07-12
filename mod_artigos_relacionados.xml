@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.5" client="site" method="upgrade">
+	<name>MOD_ARTIGOS_RELACIONADOS</name>
+	<author>Ponto Mega - Uziel</author>
+	<creationDate>2019-7-12</creationDate>
+	<copyright>Created by Ponto Mega - Uziel with generator-joomla3 by @diarcastro</copyright>
+	<license>GNU/Public</license>
+	<authorEmail>contato@pontomega.com.br</authorEmail>
+	<authorUrl>pontomega.com.br</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_ARTIGOS_RELACIONADOS_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_artigos_relacionados">mod_artigos_relacionados.php</filename>
+		<folder>tmpl</folder>
+		<folder>fields</folder>
+		<filename>helper.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_artigos_relacionados.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_artigos_relacionados.sys.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.mod_artigos_relacionados.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.mod_artigos_relacionados.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_ARTIGOS_RELACIONADOS" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_artigos_relacionados/fields">
+				<field name="total_de_itens" type="text" label="MOD_ARTIGOS_RELACIONADOS_FIELD_TOTAL_DE_ITENS_LABEL" description="MOD_ARTIGOS_RELACIONADOS_FIELD_TOTAL_DE_ITENS_DESC" />
+				<field name="items_por_linha" type="list" label="MOD_ARTIGOS_RELACIONADOS_FIELD_ITEMS_POR_LINHA_LABEL" description="MOD_ARTIGOS_RELACIONADOS_FIELD_ITEMS_POR_LINHA_DESC" default="3">
+					<option value="">JSELECT</option>
+					<option value="12">1</option>
+					<option value="6">2</option>
+					<option value="4">3</option>
+					<option value="3">4</option>
+					<option value="2">6</option>
+					<option value="1">12</option>
+				</field>
+				<field name="exibir_imagem" default="1" type="radio" class="btn-group" label="MOD_ARTIGOS_RELACIONADOS_FIELD_EXIBIR_IMAGEM_LABEL" description="MOD_ARTIGOS_RELACIONADOS_FIELD_EXIBIR_IMAGEM_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+				</field>
+				<field name="exibir_texto" default="1" type="radio" class="btn-group" label="MOD_ARTIGOS_RELACIONADOS_FIELD_EXIBIR_TEXTO_LABEL" description="MOD_ARTIGOS_RELACIONADOS_FIELD_EXIBIR_TEXTO_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+				</field>
+				<field name="exibir_titulo" default="1" type="radio" class="btn-group" label="MOD_ARTIGOS_RELACIONADOS_FIELD_EXIBIR_TITULO_LABEL" description="MOD_ARTIGOS_RELACIONADOS_FIELD_EXIBIR_TITULO_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+				</field>
+				<field type="text" name="limite_do_texto" default="" label="EXIBIR_TEXTO_LIMIT_LABEL" description="EXIBIR_TEXTO_LIMIT_DESC" />
+				<field name="show_read_more" default="1" type="radio" class="btn-group" label="SHOW_READ_MORE" description="SHOW_READ_MORE_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+				</field>
+				<field name="tipo_de_imagem" default="image_intro" type="list" label="TIPO_DE_IMAGEM" description="TIPO_DE_IMAGEM_DESC">
+				<option value="image_intro">IMAGE_INTRO</option>
+				<option value="image_fulltext">IMAGE_FULLTEXT</option>
+					<option value="first_text_image">FIRST_TEXT_IMAGE</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
